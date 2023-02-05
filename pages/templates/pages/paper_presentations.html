@@ -1,0 +1,16 @@
+{% extends 'pages/main.html' %}
+
+{% load static %}
+
+{% block title %}Paper Presentation Hall{% endblock %}
+
+{% block content %}
+<div class="conferenceeventpage">
+    <div class="videoframe2 my-5">
+        <iframe class="videolive"  src="{{link}}?controls=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     </div>
+     <a href="{% url 'conferences' %}"><button class="gobutton3">Go to Conference Hall &rarr;</button></a>
+     <a href="{% url 'home' %}"><button class="gobutton4">Lobby</button></a>
+    <img class="bgimg" src="{% static 'images/confhall.jpg' %}"/>
+</div>
+{% endblock %}

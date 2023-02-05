@@ -1,0 +1,121 @@
+{% extends 'pages/main.html' %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+{% comment %} <h3>Register here</h3>
+<hr>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.username.label}}
+    {{form.username}}<br>
+    {{form.first_name.label}}
+    {{form.first_name}}<br>
+    Phone Number
+    {{form.last_name}}<br>
+    {{form.email.label}}
+    {{form.email}}<br>
+    {{form.password1.label}}
+    {{form.password1}}<br>
+    {{form.password2.label}}
+    {{form.password2}}<br>
+    <button type="submit">Register Now</button>
+    {{form.errors}}
+</form> {% endcomment %}
+    <div class="wrapper">
+        <div class="title">
+          Registration 
+        </div>
+        <hr>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form">
+                <div class="inputfield">
+                    {{form.first_name}}
+                </div> 
+                <div class="inputfield">
+                    {{form.last_name}}
+                </div>  
+                <div class="inputfield">
+                    {{form.username}}
+                </div> 
+                <div class="inputfield">
+                    {{form.email}}
+                </div> 
+                <div class="inputfield">
+                    {{form.designation}}
+                </div> 
+                <div class="inputfield">
+                    {{form.department}}
+                </div> 
+                <div class="inputfield">
+                    {{form.organization}}
+                </div> 
+                <div class="inputfield">
+                    {{form.place}}
+                </div> 
+                
+                <div class="inputfield">
+                    {{form.password1}}
+                </div>  
+                <div class="inputfield">
+                    {{form.password2}}
+                </div> 
+                <div class="title">
+                    <button class="btn btn-primary btn-btn-lg" type="submit">Register Now</button>
+                    {{form.errors}}
+                </div>
+                <div class="inputfield">
+                    <h5>Already registered?<a href="/login">login now</a></h5>
+                </div>
+            </div>
+        </form>
+    </div>
+    <section class="section3">
+        <p class="contactinfohometexttitle">Contact Us</p>
+    
+        <div class="contactsectionitebd">
+     <div class="contactitem">
+        <svg class= "callicon"width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M17.6602 13.6219C17.4074 13.3921 17.0752 13.2696 16.7337 13.2801C16.3922 13.2907 16.0682 13.4335 15.83 13.6785L12.6815 16.9165C11.9236 16.7718 10.4 16.2968 8.83161 14.7324C7.26325 13.1627 6.78827 11.6352 6.64749 10.8826L9.88289 7.73269C10.1282 7.49471 10.2712 7.17063 10.2818 6.82905C10.2923 6.48746 10.1696 6.15517 9.93947 5.90249L5.07781 0.556646C4.84761 0.303177 4.52767 0.14943 4.18594 0.128056C3.84421 0.106683 3.5076 0.219367 3.24762 0.442177L0.392462 2.89077C0.164985 3.11907 0.0292114 3.42292 0.0108969 3.74468C-0.0088392 4.07362 -0.38514 11.8654 5.65673 17.9099C10.9276 23.1795 17.53 23.565 19.3483 23.565C19.6141 23.565 19.7772 23.5571 19.8207 23.5545C20.1424 23.5364 20.4461 23.4001 20.6733 23.1716L23.1205 20.3151C23.3435 20.0553 23.4564 19.7188 23.4353 19.3771C23.4142 19.0353 23.2607 18.7153 23.0074 18.4849L17.6602 13.6219Z" fill="white"/>
+         </svg>
+         <p class="contactinfohometext">Dr. Nagesh   +91 9959835235</p>
+     </div>
+    
+    
+     <div class="contactitem">
+        <svg class= "callicon"width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M17.6602 13.6219C17.4074 13.3921 17.0752 13.2696 16.7337 13.2801C16.3922 13.2907 16.0682 13.4335 15.83 13.6785L12.6815 16.9165C11.9236 16.7718 10.4 16.2968 8.83161 14.7324C7.26325 13.1627 6.78827 11.6352 6.64749 10.8826L9.88289 7.73269C10.1282 7.49471 10.2712 7.17063 10.2818 6.82905C10.2923 6.48746 10.1696 6.15517 9.93947 5.90249L5.07781 0.556646C4.84761 0.303177 4.52767 0.14943 4.18594 0.128056C3.84421 0.106683 3.5076 0.219367 3.24762 0.442177L0.392462 2.89077C0.164985 3.11907 0.0292114 3.42292 0.0108969 3.74468C-0.0088392 4.07362 -0.38514 11.8654 5.65673 17.9099C10.9276 23.1795 17.53 23.565 19.3483 23.565C19.6141 23.565 19.7772 23.5571 19.8207 23.5545C20.1424 23.5364 20.4461 23.4001 20.6733 23.1716L23.1205 20.3151C23.3435 20.0553 23.4564 19.7188 23.4353 19.3771C23.4142 19.0353 23.2607 18.7153 23.0074 18.4849L17.6602 13.6219Z" fill="white"/>
+         </svg>
+        <p class="contactinfohometext">Mr. Anil Kumar  +91 9494418834</p>
+     </div>
+    
+     <div class="contactitem">
+        <svg class="mailicon"width="20px" height="20px" viewBox="0 0 23 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M4.3125 0.56543C3.16875 0.56543 2.07185 1.01978 1.2631 1.82853C0.454352 2.63728 0 3.73418 0 4.87793V13.5029C0 14.6467 0.454352 15.7436 1.2631 16.5523C2.07185 17.3611 3.16875 17.8154 4.3125 17.8154H18.6875C19.8312 17.8154 20.9281 17.3611 21.7369 16.5523C22.5456 15.7436 23 14.6467 23 13.5029V4.87793C23 3.73418 22.5456 2.63728 21.7369 1.82853C20.9281 1.01978 19.8312 0.56543 18.6875 0.56543H4.3125ZM2.875 4.87793C2.875 4.49668 3.02645 4.13105 3.29603 3.86146C3.56562 3.59188 3.93125 3.44043 4.3125 3.44043H18.6875C19.0687 3.44043 19.4344 3.59188 19.704 3.86146C19.9736 4.13105 20.125 4.49668 20.125 4.87793V5.36668L11.5 9.06393L2.875 5.36668V4.87793ZM2.875 8.49468L10.9336 11.9476C11.1126 12.0243 11.3053 12.0638 11.5 12.0638C11.6947 12.0638 11.8874 12.0243 12.0664 11.9476L20.125 8.49468V13.5029C20.125 13.8842 19.9736 14.2498 19.704 14.5194C19.4344 14.789 19.0687 14.9404 18.6875 14.9404H4.3125C3.93125 14.9404 3.56562 14.789 3.29603 14.5194C3.02645 14.2498 2.875 13.8842 2.875 13.5029V8.49468Z" fill="white"/>
+         </svg>
+         
+        <p class="contactinfohometext">Write to us: iaqhei.iqac@gmail.com</p>
+    
+     </div>
+    </div>
+      </section>
+    <script>
+    var form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder='First Name..';
+        form_fields[2].placeholder='Last Name..';
+        form_fields[3].placeholder='Phone Number...';
+        form_fields[4].placeholder='Email Address...';
+        form_fields[5].placeholder='Designation...';
+        form_fields[6].placeholder='Department...';
+        form_fields[7].placeholder='Organization...';
+        form_fields[8].placeholder='Nationality...';
+        form_fields[9].placeholder='Password...';
+        form_fields[10].placeholder='Confirm Password...';
+
+        for (var field in form_fields){	
+        form_fields[field].className += ' form-control'
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'pages/main.html' %}
+
+{% block title %}Events{% endblock title %}
+
+{% block content %}
+    <h1 align='center'> Events </h1>
+    <div class="row text-center" style="margin-left: 10%; margin-top: 3%">
+    {% for event in events %}
+        <div class="col-sm-5">
+            <div class="card">
+            <h5 class="card-header" style="background: blue; color: white;">{{event.name}}</h5>
+            <div class="card-body">
+                <h5 class="card-title"> Timings: {{event.start_time}} to {{event.end_time}}</h5>
+                <p class="card-text">{{event.description}}</p>
+                {% if user in event.registered_users.all %}
+                <a class="btn btn-success">Click Here to Join {{event.name}} in WebEx</a>
+                <a href="{% url 'event-unregister' event_id=event.id %}" class="btn btn-danger" onclick="return confirm('Are you sure you want to unregister for {{event.name}}?');">Unregister</a><br />
+                {% else %}
+                <a href="{% url 'event-register' event_id=event.id %}" class="btn btn-primary" onclick="alert('Successfully Registered for {{event.name}}')">Register</a><br />
+                {% endif %}<br />
+                <a style="color: black;" href="{{event.youtube_link}}" class="btn btn-warning">Click Here to watch the live on YouTube for {{event.name}}</a>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock content %}
